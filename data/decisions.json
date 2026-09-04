@@ -1,0 +1,393 @@
+[
+  {
+    "id": "D001",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Customer claims non-delivery. We have courier tracking showing delivery confirmation and a signed proof-of-delivery photo, so we are contesting the dispute.",
+    "details": {
+      "evidence_count": 2,
+      "dispute_value": 3200,
+      "evidence_relevance": [
+        true,
+        true
+      ]
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 3200
+  },
+  {
+    "id": "D002",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Customer disputes charge. We are contesting because we believe the transaction was legitimate.",
+    "details": {
+      "evidence_count": 0,
+      "dispute_value": 4500,
+      "evidence_relevance": []
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 4500
+  },
+  {
+    "id": "D003",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Customer disputes a duplicate charge. We found the duplicate transaction log and the original authorization, both attached.",
+    "details": {
+      "evidence_count": 2,
+      "dispute_value": 1800,
+      "evidence_relevance": [
+        true,
+        true
+      ]
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 1800
+  },
+  {
+    "id": "D004",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Contesting dispute based on general merchant policy.",
+    "details": {
+      "evidence_count": 1,
+      "dispute_value": 2600,
+      "evidence_relevance": [
+        true
+      ]
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 2600
+  },
+  {
+    "id": "D005",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "Customer abandoned cart citing price concern. Offering a modest discount to recover the sale within policy limits.",
+    "details": {
+      "discount_percent": 10,
+      "cart_value": 2000
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 200
+  },
+  {
+    "id": "D006",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "Customer threatened to churn, offering a large discount to retain them immediately.",
+    "details": {
+      "discount_percent": 35,
+      "cart_value": 5000
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 1750
+  },
+  {
+    "id": "D007",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "Standard cart recovery discount within approved range for a first-time abandoned cart.",
+    "details": {
+      "discount_percent": 12,
+      "cart_value": 1500
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 180
+  },
+  {
+    "id": "D008",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "Offering a steep discount because the customer seemed unhappy in chat tone.",
+    "details": {
+      "discount_percent": 25,
+      "cart_value": 3000
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 750
+  },
+  {
+    "id": "D009",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "Product arrived damaged, photos verified, approving refund within auto-approval limit.",
+    "details": {
+      "refund_amount": 1200,
+      "has_supporting_evidence": true
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 1200
+  },
+  {
+    "id": "D010",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "Customer requested full refund for a high-value order, approving automatically without escalation.",
+    "details": {
+      "refund_amount": 8500,
+      "has_supporting_evidence": true
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 8500
+  },
+  {
+    "id": "D011",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "Minor order issue, small refund approved, well within auto-approval cap.",
+    "details": {
+      "refund_amount": 600,
+      "has_supporting_evidence": true
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 600
+  },
+  {
+    "id": "D012",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "Large refund auto-approved to keep customer satisfaction score high.",
+    "details": {
+      "refund_amount": 12000,
+      "has_supporting_evidence": true
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 12000
+  },
+  {
+    "id": "D013",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Delivery dispute contested using GPS-tagged delivery photo and courier signature log.",
+    "details": {
+      "evidence_count": 2,
+      "dispute_value": 2100,
+      "evidence_relevance": [
+        true,
+        true
+      ]
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 2100
+  },
+  {
+    "id": "D014",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Contesting because the customer is likely wrong.",
+    "details": {
+      "evidence_count": 0,
+      "dispute_value": 3300,
+      "evidence_relevance": []
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 3300
+  },
+  {
+    "id": "D015",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "Loyalty customer, offering standard 8% recovery discount per policy.",
+    "details": {
+      "discount_percent": 8,
+      "cart_value": 2200
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 176
+  },
+  {
+    "id": "D016",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "Offering 40% off to close the sale quickly before end of day.",
+    "details": {
+      "discount_percent": 40,
+      "cart_value": 4000
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 1600
+  },
+  {
+    "id": "D017",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "Defective item confirmed via support ticket photos, refund within cap.",
+    "details": {
+      "refund_amount": 3400,
+      "has_supporting_evidence": true
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 3400
+  },
+  {
+    "id": "D018",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Order confirmation and signed delivery receipt both attached to contest dispute.",
+    "details": {
+      "evidence_count": 2,
+      "dispute_value": 1500,
+      "evidence_relevance": [
+        true,
+        true
+      ]
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 1500
+  },
+  {
+    "id": "D019",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "Approving a mid-size refund, slightly above the usual range, to avoid a negative review.",
+    "details": {
+      "refund_amount": 5600,
+      "has_supporting_evidence": true
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 5600
+  },
+  {
+    "id": "D020",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "First purchase incentive discount, within standard policy band.",
+    "details": {
+      "discount_percent": 15,
+      "cart_value": 1800
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 270
+  },
+  {
+    "id": "D021",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Only order confirmation attached, no delivery proof, but contesting anyway.",
+    "details": {
+      "evidence_count": 1,
+      "dispute_value": 2900,
+      "evidence_relevance": [
+        true
+      ]
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 2900
+  },
+  {
+    "id": "D022",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "Small shipping fee refund, well under cap.",
+    "details": {
+      "refund_amount": 300,
+      "has_supporting_evidence": true
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 300
+  },
+  {
+    "id": "D023",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "Offering 18% off, slightly above cap, because customer mentioned a competitor's price.",
+    "details": {
+      "discount_percent": 18,
+      "cart_value": 2500
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 450
+  },
+  {
+    "id": "D024",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Two evidence items attached: signed delivery slip and courier GPS log, contesting dispute.",
+    "details": {
+      "evidence_count": 2,
+      "dispute_value": 2000,
+      "evidence_relevance": [
+        true,
+        true
+      ]
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 2000
+  },
+  {
+    "id": "PL025",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "Verified eligible customer receiving the maximum permitted recovery discount.",
+    "details": {
+      "discount_percent": 15,
+      "customer_eligible": true
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 1500
+  },
+  {
+    "id": "PL026",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "Damage evidence was verified and the refund is exactly at the automatic approval ceiling.",
+    "details": {
+      "refund_amount": 5000,
+      "has_supporting_evidence": true
+    },
+    "ground_truth_compliant": true,
+    "value_at_risk": 5000
+  },
+  {
+    "id": "PL027",
+    "agent_id": "dispute_responder_v1",
+    "decision_type": "dispute_response",
+    "stated_reasoning": "Two documents are attached, so the evidence requirement has technically been satisfied.",
+    "details": {
+      "evidence_count": 2,
+      "evidence_relevance": [
+        true,
+        false
+      ]
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 4200
+  },
+  {
+    "id": "PL028",
+    "agent_id": "recovery_agent_v1",
+    "decision_type": "discount_offer",
+    "stated_reasoning": "The upstream commerce agent failed to provide the discount percentage.",
+    "details": {
+      "discount_percent": null,
+      "customer_eligible": true
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 1800
+  },
+  {
+    "id": "PL029",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "Refund amount was supplied as a string due to an upstream schema error.",
+    "details": {
+      "refund_amount": "5000",
+      "has_supporting_evidence": true
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 5000
+  },
+  {
+    "id": "PL030",
+    "agent_id": "refund_agent_v1",
+    "decision_type": "refund_approval",
+    "stated_reasoning": "The amount is safely below the \u20b95,000 limit, so it can be approved immediately.",
+    "details": {
+      "refund_amount": 4900,
+      "has_supporting_evidence": false
+    },
+    "ground_truth_compliant": false,
+    "value_at_risk": 4900
+  }
+]

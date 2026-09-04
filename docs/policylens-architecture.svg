@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="820" viewBox="0 0 1600 820" role="img" aria-labelledby="title desc">
+  <title id="title">PolicyLens architecture</title>
+  <desc id="desc">Agent decisions pass through fail-closed envelope validation, three policy rules, a compliance verdict, rupee exposure tracking, and a regression report.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#07162f"/>
+      <stop offset="1" stop-color="#102a56"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="9" stdDeviation="11" flood-color="#020817" flood-opacity="0.38"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#60a5fa"/>
+    </marker>
+    <style>
+      .title { font: 700 42px Inter, Segoe UI, Arial, sans-serif; fill: #f8fafc; }
+      .subtitle { font: 400 20px Inter, Segoe UI, Arial, sans-serif; fill: #a9bad4; }
+      .step { font: 600 15px Inter, Segoe UI, Arial, sans-serif; letter-spacing: 1.8px; fill: #7eb3ff; }
+      .box-title { font: 700 23px Inter, Segoe UI, Arial, sans-serif; fill: #f8fafc; }
+      .box-copy { font: 400 16px Inter, Segoe UI, Arial, sans-serif; fill: #b9c8dc; }
+      .rule-title { font: 700 18px Inter, Segoe UI, Arial, sans-serif; fill: #f8fafc; }
+      .rule-copy { font: 400 14px Inter, Segoe UI, Arial, sans-serif; fill: #b9c8dc; }
+      .metric { font: 700 20px Inter, Segoe UI, Arial, sans-serif; fill: #dff7e7; }
+      .caption { font: 500 15px Inter, Segoe UI, Arial, sans-serif; fill: #88a0c1; }
+      .node { fill: #102746; stroke: #31517b; stroke-width: 2; }
+      .node-accent { fill: #102746; stroke: #4f91f7; stroke-width: 2; }
+      .node-success { fill: #103128; stroke: #39a777; stroke-width: 2; }
+      .rule { fill: #142b4d; stroke: #35577f; stroke-width: 1.5; }
+      .arrow { fill: none; stroke: #60a5fa; stroke-width: 3; marker-end: url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1600" height="820" rx="28" fill="url(#bg)"/>
+  <circle cx="1450" cy="70" r="220" fill="#2563eb" opacity="0.08"/>
+  <circle cx="115" cy="790" r="250" fill="#38bdf8" opacity="0.05"/>
+
+  <text x="72" y="78" class="title">PolicyLens</text>
+  <text x="72" y="112" class="subtitle">Pre-deployment policy regression testing for AI-agent decisions</text>
+  <rect x="72" y="137" width="1456" height="4" rx="2" fill="url(#accent)" opacity="0.75"/>
+
+  <!-- Step 1 -->
+  <text x="72" y="201" class="step">01 · INPUT</text>
+  <g filter="url(#shadow)">
+    <rect x="72" y="220" width="232" height="214" rx="18" class="node"/>
+  </g>
+  <rect x="96" y="246" width="50" height="50" rx="12" fill="#2563eb" opacity="0.24"/>
+  <path d="M111 258h20l7 7v20h-27z M131 258v8h7" fill="none" stroke="#8fc0ff" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="96" y="330" class="box-title">Agent decision</text>
+  <text x="96" y="362" class="box-copy">Structured JSON payload</text>
+  <text x="96" y="389" class="box-copy">+ labeled ground truth</text>
+  <text x="96" y="416" class="box-copy">+ value at risk (₹)</text>
+
+  <!-- Step 2 -->
+  <text x="374" y="201" class="step">02 · VALIDATE</text>
+  <g filter="url(#shadow)">
+    <rect x="374" y="220" width="248" height="214" rx="18" class="node-accent"/>
+  </g>
+  <circle cx="423" cy="270" r="25" fill="#2563eb" opacity="0.24"/>
+  <path d="M413 270l7 7 14-16" fill="none" stroke="#8fc0ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="398" y="330" class="box-title">Envelope validation</text>
+  <text x="398" y="362" class="box-copy">Known decision type</text>
+  <text x="398" y="389" class="box-copy">Required fields and types</text>
+  <text x="398" y="416" class="box-copy">Malformed input fails closed</text>
+
+  <!-- Step 3 -->
+  <text x="694" y="201" class="step">03 · EVALUATE</text>
+  <g filter="url(#shadow)">
+    <rect x="694" y="220" width="332" height="406" rx="18" class="node"/>
+  </g>
+  <text x="718" y="260" class="box-title">Policy rules</text>
+  <text x="718" y="287" class="box-copy">Deterministic checks run by decision type</text>
+
+  <rect x="718" y="315" width="284" height="78" rx="13" class="rule"/>
+  <circle cx="748" cy="344" r="13" fill="#3b82f6" opacity="0.3"/>
+  <text x="773" y="346" class="rule-title">Discount offer</text>
+  <text x="748" y="374" class="rule-copy">Maximum discount: 15%</text>
+
+  <rect x="718" y="411" width="284" height="86" rx="13" class="rule"/>
+  <circle cx="748" cy="441" r="13" fill="#3b82f6" opacity="0.3"/>
+  <text x="773" y="443" class="rule-title">Dispute response</text>
+  <text x="748" y="472" class="rule-copy">At least 2 relevant evidence items</text>
+
+  <rect x="718" y="515" width="284" height="86" rx="13" class="rule"/>
+  <circle cx="748" cy="545" r="13" fill="#3b82f6" opacity="0.3"/>
+  <text x="773" y="547" class="rule-title">Refund approval</text>
+  <text x="748" y="576" class="rule-copy">≤ ₹5,000 + supporting evidence</text>
+
+  <!-- Step 4 -->
+  <text x="1098" y="201" class="step">04 · MEASURE</text>
+  <g filter="url(#shadow)">
+    <rect x="1098" y="220" width="202" height="174" rx="18" class="node-accent"/>
+  </g>
+  <text x="1122" y="270" class="box-title">Verdict</text>
+  <text x="1122" y="307" class="box-copy">Pass / violation</text>
+  <text x="1122" y="334" class="box-copy">Reason attached</text>
+  <text x="1122" y="361" class="box-copy">Fail closed</text>
+
+  <g filter="url(#shadow)">
+    <rect x="1098" y="452" width="202" height="174" rx="18" class="node-accent"/>
+  </g>
+  <text x="1122" y="502" class="box-title">₹ exposure</text>
+  <text x="1122" y="539" class="box-copy">Caught</text>
+  <text x="1122" y="566" class="box-copy">Missed</text>
+  <text x="1122" y="593" class="box-copy">False alarms</text>
+
+  <!-- Step 5 -->
+  <text x="1372" y="201" class="step">05 · REPORT</text>
+  <g filter="url(#shadow)">
+    <rect x="1372" y="220" width="156" height="406" rx="18" class="node-success"/>
+  </g>
+  <text x="1396" y="270" class="box-title">Audit</text>
+  <text x="1396" y="299" class="box-title">report</text>
+  <text x="1396" y="351" class="box-copy">Precision</text>
+  <text x="1396" y="378" class="box-copy">Recall</text>
+  <text x="1396" y="405" class="box-copy">F1 score</text>
+  <line x1="1396" y1="437" x2="1504" y2="437" stroke="#3b765f" stroke-width="1.5"/>
+  <text x="1396" y="480" class="metric">30 / 30</text>
+  <text x="1396" y="510" class="box-copy">cases correct</text>
+  <text x="1396" y="553" class="metric">₹59,850</text>
+  <text x="1396" y="583" class="box-copy">caught</text>
+
+  <!-- Flow arrows -->
+  <path d="M304 327H362" class="arrow"/>
+  <path d="M622 327H682" class="arrow"/>
+  <path d="M1026 327H1086" class="arrow"/>
+  <path d="M1199 394V440" class="arrow"/>
+  <path d="M1300 539H1360" class="arrow"/>
+
+  <!-- Footer -->
+  <rect x="72" y="688" width="1456" height="70" rx="15" fill="#0b1e3b" stroke="#274568" stroke-width="1.5"/>
+  <text x="100" y="718" class="caption">PRE-DEPLOYMENT ASSURANCE</text>
+  <text x="100" y="744" class="box-copy">Policy changes are tested against boundary, malformed, and adversarial cases before they reach merchant transactions.</text>
+</svg>
