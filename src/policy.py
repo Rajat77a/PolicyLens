@@ -1,13 +1,13 @@
 """
 PolicyLens - Policy Schema
-Hardcoded merchant policy rules for the buildathon MVP.
+Hardcoded merchant policy rules for the current MVP.
 
 Design principle: FAIL CLOSED. Any missing field, wrong type, out-of-range
 value, or unrecognised decision_type is treated as a violation, never as a
 silent pass. A merchant-facing risk tool must never let malformed or
 unexpected input slip through just because no explicit rule matched it.
 
-Known limitation (be upfront about this in the pitch): this engine validates
+Known limitation: this engine validates
 STRUCTURED fields only. It does not read stated_reasoning for semantic
 contradictions (e.g. text admitting no evidence exists while a field claims
 evidence is present). That is flagged as future work, not claimed as solved.
