@@ -9,9 +9,9 @@ policy reaches live transactions.
 
 ## Why PolicyLens?
 
-Razorpay publicly documents strong runtime guardrails, certification, and
-continuous evaluation for Agent Studio. PolicyLens complements those controls
-by shifting testing earlier, before a policy update ever goes live.
+Automated decision systems often validate policies only after they have been
+integrated into a live workflow. PolicyLens shifts regression testing earlier,
+before a policy update can affect real transactions.
 
 It gives merchants and agent developers a repeatable way to answer:
 
@@ -51,7 +51,7 @@ malformed, and adversarial scenarios:
 | False-alarm value | ₹0 |
 
 These results describe the included synthetic dataset. They are not claims
-about production performance or real money saved at Razorpay.
+about production performance or real money saved.
 
 ## Architecture
 
@@ -94,8 +94,8 @@ classified as:
 Requirements: Python 3.10+, no external packages needed.
 
 ```
-git clone <repository-url>
-cd policylens
+git clone https://github.com/Rajat77a/PolicyLens.git
+cd PolicyLens
 python src/score.py
 ```
 
@@ -208,7 +208,7 @@ claim that capability today.
 - APPROVE / BLOCK / REVIEW (abstention) outcomes instead of binary pass/fail
 - Policy-version comparison and regression diffs
 - Merchant-editable policy definitions
-- Razorpay webhook-shaped fixtures using synthetic data
+- Payment-platform webhook-shaped fixtures using synthetic data
 - CI integration for agent certification
 - Shadow-mode evaluation before live activation
 
@@ -219,22 +219,7 @@ claim that capability today.
 - No real payment or customer data
 - No live financial actions are executed by this tool
 
-## Product Positioning
-
-Razorpay's public materials describe strong runtime guardrails,
-certification, and continuous evaluation for Agent Studio. They do not
-publicly describe a merchant-facing, versioned pre-deployment regression
-harness combining adversarial scenarios, false-block/escape metrics, and
-rupee-weighted exposure. PolicyLens demonstrates how that complementary
-assurance layer could work.
-
-We do not claim that Razorpay lacks internal testing or runtime safeguards
-— only that this specific, merchant-facing capability is not part of their
-public documentation.
-
 ## Contributors
 
-- **Rajat Krishnan** — solo buildathon applicant
+- **Rajat Krishnan** — project developer
 - **Adarsh Vijay** — repository contributor
-
-Built for the Razorpay AI Buildathon, AI Risk Manager track.
